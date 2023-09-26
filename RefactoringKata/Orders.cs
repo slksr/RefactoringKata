@@ -1,24 +1,21 @@
-﻿using System.Collections.Generic;
+﻿namespace RefactoringKata;
 
-namespace RefactoringKata
+public class Orders
 {
-    public class Orders
+    private readonly List<Order> _orders = new();
+
+    public void AddOrder(Order order)
     {
-        private List<Order> _orders = new List<Order>();
+        _orders.Add(order);
+    }
 
-        public void AddOrder(Order order)
-        {
-            _orders.Add(order);
-        }
+    public int GetOrdersCount()
+    {
+        return _orders.Count;
+    }
 
-        public int GetOrdersCount()
-        {
-            return _orders.Count;
-        }
-
-        public Order GetOrder(int i)
-        {
-            return _orders[i];
-        }
+    public Order GetOrder(int i)
+    {
+        return _orders[i];
     }
 }

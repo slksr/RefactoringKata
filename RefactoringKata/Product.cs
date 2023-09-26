@@ -1,22 +1,21 @@
-﻿namespace RefactoringKata
+﻿namespace RefactoringKata;
+
+public class Product
 {
-    public class Product
+    public const int SizeNotApplicable = -1;
+
+    public Product(string code, int color, int size, double price, string currency)
     {
-        public static int SIZE_NOT_APPLICABLE = -1;
-
-        public string Code { get; set; }
-        public int Color { get; set; }
-        public int Size { get; set; }
-        public double Price { get; set; }
-        public string Currency { get; set; }
-
-        public Product(string code, int color, int size, double price, string currency)
-        {
-            Code = code;
-            Color = color;
-            Size = size;
-            Price = price;
-            Currency = currency;
-        }
+        Code = code;
+        Color = color;
+        Size = size;
+        Price = price;
+        Currency = currency;
     }
+
+    public string Code { get; }
+    public int Color { get; }
+    public int Size { get; }
+    public double Price { get; }
+    public string Currency { get; }
 }
